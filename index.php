@@ -29,6 +29,8 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 <script type="text/javascript">
     $(document).ready(function(){
         $(".dropdown-button").dropdown();
+        document.getElementById("label1").style.visibility='hidden';
+
     });
 </script>
 
@@ -92,56 +94,75 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
                 <input class="with-gap" name="group1" type="radio" id="test3" />
                 <label for="test3">Green</label>
             </p>
+            <label id="label1" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
+
             <p class="range-field">
-                <input type="range" id="test5" value="0" min="0" max="10" />
+                <input type="range" id="range1" value="0" min="0" max="10" />
             </p>
+
+
+
             Question #2
             <p>
-                <input class="with-gap" name="group2" type="radio" id="test1" />
-                <label for="test1">Red</label>
+                <input class="with-gap" name="group2" type="radio" id="test10" />
+                <label for="test10">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group2" type="radio" id="test2" />
-                <label for="test2">Blue</label>
+                <input class="with-gap" name="group2" type="radio" id="test11" />
+                <label for="test11">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group2" type="radio" id="test3" />
-                <label for="test3">Green</label>
+                <input class="with-gap" name="group2" type="radio" id="test12" />
+                <label for="test12">Green</label>
             </p>
+            <label id="label2" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
+
             <p class="range-field">
-                <input type="range" id="test5" value="0" min="0" max="10" />
+                <input type="range" id="range2" value="0" min="0" max="10" />
             </p>
+
+
+
             Question #3
             <p>
-                <input class="with-gap" name="group3" type="radio" id="test1" />
-                <label for="test1">Red</label>
+                <input class="with-gap" name="group3" type="radio" id="test4" />
+                <label for="test4">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group3" type="radio" id="test2" />
-                <label for="test2">Blue</label>
+                <input class="with-gap" name="group3" type="radio" id="test5" />
+                <label for="test5">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group3" type="radio" id="test3" />
-                <label for="test3">Green</label>
+                <input class="with-gap" name="group3" type="radio" id="test6" />
+                <label for="test6">Green</label>
             </p>
+
+            <label id="label3" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
+
             <p class="range-field">
-                <input type="range" id="test5" value="0" min="0" max="10" />
+                <input type="range" id="range3" value="0" min="0" max="10" />
             </p>
+
+
+
             Question #4
             <p>
-                <input class="with-gap" name="group4" type="radio" id="test1" />
-                <label for="test1">Red</label>
+                <input class="with-gap" name="group4" type="radio" id="test7" />
+                <label for="test7">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group4" type="radio" id="test2" />
-                <label for="test2">Blue</label>
+                <input class="with-gap" name="group4" type="radio" id="test8" />
+                <label for="test8">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group4" type="radio" id="test3" />
-                <label for="test3">Green</label>
+                <input class="with-gap" name="group4" type="radio" id="test9" />
+                <label for="test9">Green</label>
             </p>
+
+            <label id="label4" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
+
             <p class="range-field">
-                <input type="range" id="test5" value="0" min="0" max="10" />
+                <input type="range" id="range4" value="0" min="0" max="10" />
             </p>
 
 
@@ -155,8 +176,44 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
     <script type="text/javascript">
         document.getElementById("btnSubmit").onclick = function() {
 //        document.getElementById("formID").submit();
-            alert("teeeest");
+//        document.getElementById("btnSubmit").style.visibility='hidden';
+//            alert("teeeest");
+//        document.getElementById("btnSubmit").style.visibility='hidden';
+
+
+            if (group1Check() == false){
+                document.getElementById("label1").style.visibility='visible';
+            }
+            else document.getElementById("label1").style.visibility='hidden';
+            if (group2Check() == false){
+                document.getElementById("label2").style.visibility='visible';
+            }
+            else document.getElementById("label2").style.visibility='hidden';
+
+            if (group3Check() == false){
+                document.getElementById("label3").style.visibility='visible';
+            }
+            else document.getElementById("label3").style.visibility='hidden';
+
+            if (group4Check() == false){
+                document.getElementById("label4").style.visibility='visible';
+            }
+            else document.getElementById("label4").style.visibility='hidden';
+
+
         };
+
+        function group1Check() {
+            return ($('input[name=group1]:checked').size() > 0);
+        }function group2Check() {
+            return ($('input[name=group2]:checked').size() > 0);
+        }function group3Check() {
+            return ($('input[name=group3]:checked').size() > 0);
+        }function group4Check() {
+            return ($('input[name=group4]:checked').size() > 0);
+        }
+
+
     </script>
 <!--================== FOOTER =============================-->
 
