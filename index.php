@@ -34,16 +34,6 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
     });
 </script>
 
-<script type="text/javascript">
-    function validateForm() {
-        var x = document.forms["SurveyForm"]["group1"].value;
-        if (x == null || x == "") {
-            alert("Name must be filled out");
-            return false;
-        }
-    }
-
-</script>
 
 
 <!--================== CORPS ==============================-->
@@ -80,7 +70,7 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 <main>
     <div class="question">
         <?php echo $lang['QUESTION1'];?>
-        <form name="SurveyForm" id="formID">
+        <form name="SurveyForm" id="formID" action="common.php" method="post">
             Question #1
             <p>
                 <input class="with-gap" name="group1" type="radio" id="test1" />
@@ -174,44 +164,54 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
     </div>
 </main>
     <script type="text/javascript">
+
+//========================ENVOI FORM=========================================
         document.getElementById("btnSubmit").onclick = function() {
-//        document.getElementById("formID").submit();
-//        document.getElementById("btnSubmit").style.visibility='hidden';
-//            alert("teeeest");
-//        document.getElementById("btnSubmit").style.visibility='hidden';
 
+            var valide = true;
+            var i;
+            var nbQuestions=5;
 
-            if (group1Check() == false){
-                document.getElementById("label1").style.visibility='visible';
+            for (i =1; i<nbQuestions;i++ ){
+//                window.alert(window['group'+i+'Check']());
+
+                if (window['group'+i+'Check']() == false){
+                    document.getElementById('label'+i).style.visibility='visible';
+                }
+                else {
+                    document.getElementById('label'+i).style.visibility='hidden';
+                }
+
             }
-            else document.getElementById("label1").style.visibility='hidden';
-            if (group2Check() == false){
-                document.getElementById("label2").style.visibility='visible';
+
+            valide = !!(window.group1Check() && window.group2Check() && window.group3Check() && window.group4Check());
+
+
+            console.log("group 1 : "+window.group1Check());
+            console.log("valide : "+ valide);
+
+            if (valide == true){
+                document.getElementById("formID").submit();
+
             }
-            else document.getElementById("label2").style.visibility='hidden';
-
-            if (group3Check() == false){
-                document.getElementById("label3").style.visibility='visible';
-            }
-            else document.getElementById("label3").style.visibility='hidden';
-
-            if (group4Check() == false){
-                document.getElementById("label4").style.visibility='visible';
-            }
-            else document.getElementById("label4").style.visibility='hidden';
-
-
         };
 
-        function group1Check() {
+
+        window.group1Check = function() {
             return ($('input[name=group1]:checked').size() > 0);
-        }function group2Check() {
+        };
+
+        window.group2Check = function() {
             return ($('input[name=group2]:checked').size() > 0);
-        }function group3Check() {
+        };
+
+        window.group3Check = function() {
             return ($('input[name=group3]:checked').size() > 0);
-        }function group4Check() {
+        };
+
+        window.group4Check = function() {
             return ($('input[name=group4]:checked').size() > 0);
-        }
+        };
 
 
     </script>
