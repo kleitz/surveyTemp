@@ -86,11 +86,11 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
             </p>
             <label id="label1" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
 
-            <p class="range-field">
-                <input type="range" id="range1" value="0" min="0" max="10" />
-            </p>
+<!--            <p class="range-field">-->
+<!--                <input type="range" id="range1" value="0" min="0" max="10" />-->
+<!--            </p>-->
 
-
+            <hr style="color: #a3a3a3">
 
             Question #2
             <p>
@@ -107,11 +107,11 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
             </p>
             <label id="label2" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
 
-            <p class="range-field">
-                <input type="range" id="range2" value="0" min="0" max="10" />
-            </p>
+<!--            <p class="range-field">-->
+<!--                <input type="range" id="range2" value="0" min="0" max="10" />-->
+<!--            </p>-->
 
-
+            <hr style="color: #a3a3a3">
 
             Question #3
             <p>
@@ -129,10 +129,10 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 
             <label id="label3" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
 
-            <p class="range-field">
-                <input type="range" id="range3" value="0" min="0" max="10" />
-            </p>
-
+<!--            <p class="range-field">-->
+<!--                <input type="range" id="range3" value="0" min="0" max="10" />-->
+<!--            </p>-->
+            <hr style="color: #a3a3a3">
 
 
             Question #4
@@ -151,13 +151,14 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 
             <label id="label4" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
 
-            <p class="range-field">
-                <input type="range" id="range4" value="0" min="0" max="10" />
-            </p>
+<!--            <p class="range-field">-->
+<!--                <input type="range" id="range4" value="0" min="0" max="10" />-->
+<!--            </p>-->
 
-
+            <hr style="color: #a3a3a3">
+            <div align="right">
             <a id="btnSubmit" class="waves-effect waves-light btn"><i class="material-icons right">send</i><?php echo $lang['SUBMIT'];?></a>
-
+            </div>
         </form>
 
 
