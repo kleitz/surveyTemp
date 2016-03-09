@@ -106,7 +106,7 @@ for ( $i=1;$i<=4;$i++){
 <html>
 <head>
     <meta charset="utf-8">
-
+    <title>Resultat</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
