@@ -73,15 +73,15 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
         <form name="SurveyForm" id="formID" action="process.php" method="post">
             Question #1
             <p>
-                <input class="with-gap" name="group1" type="radio" value="Radio 1" id="test1" />
+                <input class="with-gap" name="group1" type="radio" value="Red" id="test1" />
                 <label for="test1">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group1" type="radio" value="Radio 2" id="test2" />
+                <input class="with-gap" name="group1" type="radio" value="Blue" id="test2" />
                 <label for="test2">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group1" type="radio" value="Radio 3" id="test3" />
+                <input class="with-gap" name="group1" type="radio" value="Green" id="test3" />
                 <label for="test3">Green</label>
             </p>
             <label id="label1" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
@@ -94,15 +94,15 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 
             Question #2
             <p>
-                <input class="with-gap" name="group2" type="radio" value="Radio 1" id="test10" />
+                <input class="with-gap" name="group2" type="radio" value="Red" id="test10" />
                 <label for="test10">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group2" type="radio" value="Radio 2" id="test11" />
+                <input class="with-gap" name="group2" type="radio" value="Blue" id="test11" />
                 <label for="test11">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group2" type="radio" value="Radio 3" id="test12" />
+                <input class="with-gap" name="group2" type="radio" value="Green" id="test12" />
                 <label for="test12">Green</label>
             </p>
             <label id="label2" style="visibility: hidden; color: firebrick"><?php echo $lang['CHECKERROR']; ?></label>
@@ -115,15 +115,15 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 
             Question #3
             <p>
-                <input class="with-gap" name="group3" type="radio" value="Radio 1" id="test4" />
+                <input class="with-gap" name="group3" type="radio" value="Red" id="test4" />
                 <label for="test4">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group3" type="radio" value="Radio 2" id="test5" />
+                <input class="with-gap" name="group3" type="radio" value="Blue" id="test5" />
                 <label for="test5">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group3" type="radio" value="Radio 3" id="test6" />
+                <input class="with-gap" name="group3" type="radio" value="Green" id="test6" />
                 <label for="test6">Green</label>
             </p>
 
@@ -137,15 +137,15 @@ $db = new PDO('mysql:host=localhost;dbname=BaseLink', "root");
 
             Question #4
             <p>
-                <input class="with-gap" name="group4" type="radio" value="Radio 1" id="test7" />
+                <input class="with-gap" name="group4" type="radio" value="Red" id="test7" />
                 <label for="test7">Red</label>
             </p>
             <p>
-                <input class="with-gap" name="group4" type="radio" value="Radio 2" id="test8" />
+                <input class="with-gap" name="group4" type="radio" value="Blue" id="test8" />
                 <label for="test8">Blue</label>
             </p>
             <p>
-                <input class="with-gap" name="group4" type="radio" value="Radio 3" id="test9" />
+                <input class="with-gap" name="group4" type="radio" value="Green" id="test9" />
                 <label for="test9">Green</label>
             </p>
 
